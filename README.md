@@ -14,7 +14,7 @@ Context Mark Language标记语法的核心特征，是用**单字符串**表示�
 
 ## 论文
 
-CML阐释了“Token即语义维度，分隔符即语义逻辑”的Context Structure Expression模型。该表达模型有望成为AI时代语义标记的新基石。详见[CSE模型.md](./CSE.md)
+CML阐释了“Token即语义维度，分隔符即语义逻辑”的Context Structure Expression模型。该表达模型有望成为AI时代语义标记的新基石。详见[CSE模型.md](./paper/CSE.md)
 
 ## 设计目标
 
