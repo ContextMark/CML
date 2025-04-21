@@ -1,4 +1,4 @@
-# 上下文结构表达: 统一的语义建模框架
+# CSE模型：上下文语义标记的统一建模框架
 
 Contextual Structure Expression: A Unified Modeling Framework for Semantic Contextual Markup
 
@@ -529,13 +529,13 @@ CSE范式，以及CML的设计，不仅是一种单字符串表达结构的形�
 
 [18] “JSON Lines,” *Wikipedia*, Mar. 2025. [Online]. Available: https://en.wikipedia.org/wiki/JSON_streaming#JSONL. [Accessed: Apr. 2025].
 
-[19] K. Niu and P. Zhang, “A Mathematical Theory of Semantic Communication: Overview,” *arXiv preprint*, Jan. 25, 2024. [Online]. Available: https://arxiv.org/abs/2401.14160. [Accessed: Apr. 2025].
+[19] C. Singh, J. P. Inala, M. Galley, R. Caruana, and J. Gao, “Rethinking Interpretability in the Era of Large Language Models,” *arXiv preprint*, Jan. 30, 2024. [Online]. Available: https://arxiv.org/abs/2402.01761. [Accessed: Apr. 2025].
 
 #### 特别附注
 
 在语义范式思考方面，最前沿的概念框架可能来自于2022年中国北京邮电大学的牛凯及其同事。他们的工作旨在将通信系统的思维方式从传统的香农范式的“句法层”推进到“语义层”，将关注点由“数据压缩”转移到“语义压缩”。在这一基础逻辑上，他们进一步提出了相应的数学理论。
 
-[20] C. Singh, J. P. Inala, M. Galley, R. Caruana, and J. Gao, “Rethinking Interpretability in the Era of Large Language Models,” *arXiv preprint*, Jan. 30, 2024. [Online]. Available: https://arxiv.org/abs/2402.01761. [Accessed: Apr. 2025].
+[20] K. Niu and P. Zhang, “A Mathematical Theory of Semantic Communication: Overview,” *arXiv preprint*, Jan. 25, 2024. [Online]. Available: https://arxiv.org/abs/2401.14160. [Accessed: Apr. 2025].
 
 [21] K. Niu, J. Dai, S. Yao, S. Wang, Z. Si, X. Qin, and P. Zhang, “Towards Semantic Communications: A Paradigm Shift,” *arXiv preprint*, Mar. 13, 2022. [Online]. Available: https://arxiv.org/abs/2203.06692. [Accessed: Apr. 2025].
 

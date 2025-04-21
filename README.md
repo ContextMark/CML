@@ -21,8 +21,10 @@ Context Mark Language标记语法的核心特征，是用**单字符串**表示�
 
 CML阐释了“Token即语义维度，分隔符即语义逻辑”的Context Structure Expression模型。该表达模型有望成为AI时代语义标记的新基石。论文详见：
 
-* 英文版本：[CSE:A Unified Framework for Semantic Contextual Annotation.md](./paper/CSE.md)
-* 中文版本：[CSE模型：上下文语义标记的统一框架.md](./paper/CSE_zh.md)
+* DOI [10.5281/zenodo.15255534](https://doi.org/10.5281/zenodo.15255534). 
+
+* 英文版本：[CSE:A Unified Modeling Framework for Semantic Contextual Markup.md](./paper/CSE.md)
+* 中文版本：[CSE模型：上下文语义标记的统一建模框架.md](./paper/CSE_zh.md)
 
 ## 设计目标
 
@@ -76,6 +78,6 @@ AI时代，知识数据源真正需要的只是**语义化**的标记结构，�
 
 这个CML字符串本身就是一个合法的markdown格式，因此可以在任意支持Markdown的主流编辑器中被实时渲染成下面的自然语义效果，一目了然：
 
-![image-20250409175912647](./assets/image-20250409175912647.png)
+`title-context`:`协议`.`Model Doc Protocol`@`下一代文档架构基础`+`为AI时代而生` `lifecycle-context`:`知识提供`.`知识分发`
 
 而经过base58编码之后的CML字符串，几乎可以被安全用于任何嵌入、存储、传输场景，在包括但不限于`html标签`、`模版字符串`、 `JSON`、`URL`、`数据库存储`、`序列化编码`、`日志输出`、`配置文件`、`shell/命令行`、`正则表达式`等所有主流场景下，**免除转义、格式错乱的困扰**。
