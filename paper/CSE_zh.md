@@ -1,7 +1,5 @@
 # CSE模型：上下文语义标记的统一建模框架
 
-Contextual Structure Expression: A Unified Modeling Framework for Semantic Contextual Markup
-
 
 
 ## 摘要（Abstract）
@@ -533,7 +531,7 @@ CSE范式，以及CML的设计，不仅是一种单字符串表达结构的形�
 
 #### 特别附注
 
-在语义范式思考方面，最前沿的概念框架可能来自于2022年中国北京邮电大学的牛凯及其同事。他们的工作旨在将通信系统的思维方式从传统的香农范式的“句法层”推进到“语义层”，将关注点由“数据压缩”转移到“语义压缩”。在这一基础逻辑上，他们进一步提出了相应的数学理论。
+在语义范式思考方面，最前沿的概念框架可能来自于2022年中国北京邮电大学的牛凯及其同事。他们的工作旨在将通信系统的思维方式从传统的香农范式的“语法层”推进到“语义层”，将关注点由“数据压缩”转移到“语义压缩”。在这一基础逻辑上，他们进一步提出了相应的数学理论。
 
 [20] K. Niu and P. Zhang, “A Mathematical Theory of Semantic Communication: Overview,” *arXiv preprint*, Jan. 25, 2024. [Online]. Available: https://arxiv.org/abs/2401.14160. [Accessed: Apr. 2025].
 
