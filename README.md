@@ -1,17 +1,20 @@
 # Context Mark 语言
 
-> **Note**
-> The English version will be released later. 欢迎查看本项目的中文文档。
-
 <br/>
 
 Context Mark Language（简称CML），面向AI时代的上下文标记需要，提供符合自然语义的全新标记架构。
 
 Context Mark Language标记语法的核心特征，是用**单字符串**表示多维度、可组合、隐含上下文关系的语义性标记结构，提供更简单的编写、嵌入、传输、存储、运算体验。
 
+<br/>
+
+​                                                                  [中文文档](https://doc-war.com/CML) | [English document](https://doc-war.com/contextmarklanguage)
+
+<br/>
+
 ## 版本
 
-当前语言规范为 **v1.0**，待发布状态。详细规范可以在 [spec1.0/zh.md](spec1.0/zh.md) 中查看。
+当前语言规范为 **v1.0**-alpha，预发布状态。详细规范可以在 [spec1.0/zh.md](spec1.0/zh.md) 中查看。
 
 ## License
 
@@ -19,7 +22,7 @@ Context Mark Language标记语法的核心特征，是用**单字符串**表示�
 
 ## 论文
 
-CML阐释了“Token即语义维度，分隔符即语义逻辑”的Context Structure Expression模型。该表达模型有望成为AI时代语义标记的新基石。论文详见：
+CML阐释了Context Structure Expression模型。该表达模型有望成为AI时代语义标记的新基石。论文详见：
 
 * DOI [10.5281/zenodo.15255534](https://doi.org/10.5281/zenodo.15255534). 
 
