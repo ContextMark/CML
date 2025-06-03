@@ -1,6 +1,10 @@
 # CSE模型：上下文语义标记的统一建模框架
 
+<p align="center">赵立伟</p>
 
+<p align="center">独立研究员</p>
+
+<p align="center">2025年4月21日</p>
 
 ## 摘要（Abstract）
 

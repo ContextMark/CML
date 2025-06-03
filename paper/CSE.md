@@ -1,6 +1,10 @@
 # Contextual Structure Expression: A Unified Modeling Framework for Semantic Contextual Markup
 
+<p align="center">Liwei Zhao</p>
 
+<p align="center">Independent Researcher</p>
+
+<p align="center">April 21, 2025</p>
 
 ## Abstract
 
@@ -20,13 +24,13 @@ To address this, this paper proposes a minimalist expression paradigm for semant
 
 
 
-## 1.Introduction
+## 1. Introduction
 
 In recent years, large language models (LLMs) have achieved groundbreaking progress in natural language understanding and generation.
 
 
 
-### Background
+### 1.1. Background
 
 With the widespread adoption of generative AI and large language models (LLMs), natural language processing is entering a new phase—one that relies more heavily on semantic structures and contextual reasoning.
 
@@ -36,7 +40,7 @@ However, current research and applications of LLMs are still primarily focused o
 
 
 
-### The Paradigm Problem
+### 1.2. The Paradigm Problem
 
 The paradigms for semantic representation and semantic storage are among the most pressing challenges facing the industry today.
 
@@ -66,7 +70,7 @@ In such a framework, semantic structures can evolve independently [5], without b
 
 
 
-## A New Paradigm for Semantic Expression: CSE
+### 1.3. A New Paradigm for Semantic Expression: CSE
 
 To meet the emerging demands of semantic structure modeling in the era of LLMs, CML (Context Mark Language) introduces a novel contextual semantic expression model called Contextual Structure Expression paradigm(CSE).
 
@@ -86,27 +90,27 @@ These advantages make it possible for CSE to become the "Context Interlingua" of
 
 
 
-## Structure of This Paper
+### 1.4. Structure of This Paper
 
 The main content of this paper is organized as follows:
 
-1. An exposition on semantic loss and generational gaps in statically structured languages;
+* An exposition on semantic loss and generational gaps in statically structured languages;
 
-2. An analysis of semantic freezing caused by the coupling of logical architectures;
+* An analysis of semantic freezing caused by the coupling of logical architectures;
 
-3. the Contextual Structure Expression (CSE) design;
+* the Contextual Structure Expression (CSE) design;
 
-4. the Context Mark Language (CML) specification;
+* the Context Mark Language (CML) specification;
 
-5. A comparative analysis between CML and mainstream expression formats;
+* A comparative analysis between CML and mainstream expression formats;
 
-6. Conclusion and future prospects
+* Conclusion and future prospects
 
-7. References involved or recommended in this paper.
+* References involved or recommended in this paper.
 
 
 
-## 2.Related Solutions and Limitations
+## 2. Related Solutions and Limitations
 
 Currently, within the LLM ecosystem, statically structured languages (such as JSON, YAML, RDF) continue to play important roles in several key stages:
 
@@ -122,7 +126,7 @@ However, such value is primarily of engineering significance, rather than semant
 
 
 
-### Expression Paradigm Issues
+### 2.1. Expression Paradigm Issues
 
 Challenges at the Semantic Expression Layer.
 
@@ -147,7 +151,7 @@ Fundamentally, this reflects the problem brought about by intergenerational diff
 
 
 
-### Semantic Freezing Problem
+### 2.2. Semantic Freezing Problem
 
 Challenges at the Semantic Storage Layer.
 
@@ -187,7 +191,7 @@ Once decoupled:
 
 
 
-### Direction
+### 2.3. Direction
 
 To conclude, the AI era may call for a native semantic interlingua (Context Interlingua)—a foundational layer of infrastructure for the future of intelligent systems. This is a role that traditional static structural languages such as JSON, YAML, and RDF were never designed to fulfill, nor are they capable of evolving into.
 
@@ -199,11 +203,13 @@ In the following sections, we introduce the proposed paradigm of Contextual Stru
 
 ## 3. CSE Expression Paradigm Design
 
-**Contextual Structure Expression (CSE)** is a paradigm centered on **contextual dimensions**, presenting a fundamentally different approach in terms of semantic architecture, expression form, and structural representation.
+Contextual Structure Expression (CSE) is a paradigm centered on contextual dimensions, presenting a fundamentally different approach in terms of semantic architecture, expression form, and structural representation.
 
-### Let’s Start with Examples
+### 3.1. Example
 
-| Expression                                   | Semantic Interpretation                                      |
+Let’s Start with Examples
+
+| CSE Expression                               | Semantic Interpretation                                      |
 | -------------------------------------------- | ------------------------------------------------------------ |
 | `message`:`urgent`+`alert`@`user123`         | A message with the nature of “urgent” and “alert,” targeted at user123 |
 | `task`.`create`:`document`@`project`.`alpha` | A task to create a document within project alpha             |
@@ -218,13 +224,13 @@ As seen from the CML examples, one of the core design goals of CSE is to enable 
 
 
 
-### Linear Structure
+### 3.2. Linear Structure
 
 CSE adopts a single-string linear text format that is compatible with natural language, serving as the carrier for semantic structural expression. The primary motivation behind this choice is to avoid semantic loss caused by repeated transformations between natural language ⇋ structured format ⇋ natural language.
 
 
 
-### Primitive Architecture
+### 3.3. Primitive Architecture
 
 The semantic string in the CSE paradigm is composed of a sequence of semantic primitives, which include two types: semantic tokens and relation separators.
 
@@ -234,7 +240,7 @@ The semantic string in the CSE paradigm is composed of a sequence of semantic pr
 
 
 
-### Semantic Expression Rules
+### 3.4. Semantic Expression Rules
 
 We use `<semantic_token>`to denote a semantic token, and `<separator>` to denote a relation separator. The expression rules are defined as follows:
 
@@ -244,25 +250,25 @@ We use `<semantic_token>`to denote a semantic token, and `<separator>` to denote
 
 
 
-### Fuzzy Semantics
+### 3.5. Fuzzy Semantics
 
-The **CSE paradigm** deliberately avoids expressing explicit numerical weights. Instead, it focuses solely on encoding **the original semantic structure**, using the intrinsic semantics of **tokens** and **structural composition** to implicitly convey weighting cues and prioritization to LLMs. These implicit signals may then indirectly influence weight computation during inference.
+The CSE paradigm deliberately avoids expressing explicit numerical weights. Instead, it focuses solely on encoding the original semantic structure, using the intrinsic semantics of tokens and structural composition to implicitly convey weighting cues and prioritization to LLMs. These implicit signals may then indirectly influence weight computation during inference.
 
-- Each **semantic token** encapsulates **multiple potential meanings**.
-- Each **relation separator** is defined with **one or more semantic relationship types**.
-- A single relation separator may represent **multiple relationship semantics**. If the exact weighting priority cannot be directly inferred from the separator, the LLM can **indirectly reason** about the actual semantic relationship and its relative importance based on the context provided by the surrounding semantic tokens.
+- Each semantic token encapsulates multiple potential meanings.
+- Each relation separator is defined with one or more semantic relationship types.
+- A single relation separator may represent multiple relationship semantics. If the exact weighting priority cannot be directly inferred from the separator, the LLM can indirectly reason about the actual semantic relationship and its relative importance based on the context provided by the surrounding semantic tokens.
 
 
 
-This **tolerance for ambiguity** introduces a critical feature: **adaptive contextual dynamics** [12]. It enables semantic contexts to be **stored independently** or **distributed across systems**, and dynamically **composed and weighted** at runtime based on real-time contextual conditions—or even under varying reasoning algorithms.
+This tolerance for ambiguity introduces a critical feature: adaptive contextual dynamics [12]. It enables semantic contexts to be stored independently or distributed across systems, and dynamically composed and weighted at runtime based on real-time contextual conditions—or even under varying reasoning algorithms.
 
 ![image-20250419104035008](./assets/image-20250419104035008.png)
 
-From the perspective of knowledge governance architecture, the **CSE paradigm advocates a “separation of powers”** among **original knowledge content**, **contextual annotations**, and **LLM weights**, rather than distilling all semantic and knowledge content entirely into the model’s weight parameters.
+From the perspective of knowledge governance architecture, the CSE paradigm advocates a “separation of powers” among original knowledge content, contextual annotations, and LLM weights, rather than distilling all semantic and knowledge content entirely into the model’s weight parameters.
 
 
 
-### Format Encoding
+### 3.7. Format Encoding
 
 On top of freely composable semantic expressions, formalized encoding is applied to produce the final contextual semantic markup.
 
@@ -275,17 +281,17 @@ On top of freely composable semantic expressions, formalized encoding is applied
 
 
 
-### Semantic Structure
+### 3.8. Semantic Structure
 
 Relation separators (`<separator>`) are responsible not only for connecting semantic tokens in the expression form, but also for carrying the semantic meaning of the structure itself.
 
 
 
-The design of relation separators is one of the core challenges in the CSE paradigm. It involves a **minimal completeness conjecture** centered on "**relation-first semantic expression**" [14] — specifically, what primitive structures to adopt, what types of relational semantics to represent, and how to assign precedence among them.
+The design of relation separators is one of the core challenges in the CSE paradigm. It involves a minimal completeness conjecture centered on "relation-first semantic expression" [14] — specifically, what primitive structures to adopt, what types of relational semantics to represent, and how to assign precedence among them.
 
 
 
-This area intentionally leaves **design space** open for markup languages, and CML is not necessarily the optimal solution.
+This area intentionally leaves design space open for markup languages, and CML is not necessarily the optimal solution.
 
 
 
@@ -295,13 +301,13 @@ CML (Context Mark Language), as the concrete implementation of the CSE paradigm,
 
 
 
-### Symbol Representation
+### 4.1. Symbol Representation
 
 In terms of form, CML selects five single-byte symbols that closely align with natural semantics—:, ., @, +, and (space)—to serve as relational separators. It also defines structural semantics and explicit precedence levels for each.
 
 
 
-### Semantic Structures
+### 4.2. Semantic Structures
 
 The five relation separators in CML are semantic structural primitives abstracted around three core requirements: priority expression of tokens, structural extensibility, and logical orthogonality. These primitives possess a high degree of expressiveness and combinability, serving as the fundamental building blocks for constructing all forms of logical-semantic relationships.
 
@@ -319,9 +325,9 @@ These five structural primitives are categorized into three types: `basic struct
 
 
 
-#### a. Supplementary Relations
+#### 4.2.1. Supplementary Relations
 
-This is a **basic structure**. The semantic object on the right serves as a supplementary explanation, specification, or constraint to the semantic object on the left. Typically, it adds semantic detail without altering the original semantic structure.
+This is a basic structure. The semantic object on the right serves as a supplementary explanation, specification, or constraint to the semantic object on the left. Typically, it adds semantic detail without altering the original semantic structure.
 $$
 f:A∋B∋C
 $$
@@ -338,9 +344,9 @@ The priority weight declarations for these two sets of tags are different, but t
 
 
 
-#### b. Linear Progression Relations
+#### 4.2.2. Linear Progression Relations
 
-This is a **basic structure** representing an ordered, step-by-step semantic relationship. It can describe a wide range of directional flows such as: progression, transformation chains, causal chains, sequences, refinements, and lifecycle stages.
+This is a basic structure representing an ordered, step-by-step semantic relationship. It can describe a wide range of directional flows such as: progression, transformation chains, causal chains, sequences, refinements, and lifecycle stages.
 $$
 f:A→B→C
 $$
@@ -357,9 +363,9 @@ Examples:
 
 
 
-#### c. Parallel Set Relations
+#### 4.2.3. Parallel Set Relations
 
-This is a **basic structure** where multiple semantic elements are presented in parallel—akin to a set, a group of object attributes, or a multi-branch description—with no implied priority or sequence. The elements can be rearranged without altering the meaning.
+This is a basic structure where multiple semantic elements are presented in parallel—akin to a set, a group of object attributes, or a multi-branch description—with no implied priority or sequence. The elements can be rearranged without altering the meaning.
 $$
 f:\{A, B, C\}
 $$
@@ -372,7 +378,7 @@ Examples:
 
 
 
-#### d. Mapping Relations
+#### 4.2.4. Mapping Relations
 
 This is a compound correspondence between one semantic structure and another, in a key-value (k-v) format. Both sides can use the basic relationships described above, supporting two-dimensional semantic expression.
 $$
@@ -397,11 +403,11 @@ Examples of valid mapping semantic structures:
 
 ##### Special Constraints
 
-CML **does not support nested mappings**, in order to avoid increasing the parsing complexity of the semantic structure itself. For example, expressions like `user:ZhangSan:delete+query` are considered invalid in format.
+CML does not support nested mappings, in order to avoid increasing the parsing complexity of the semantic structure itself. For example, expressions like `user:ZhangSan:delete+query` are considered invalid in format.
 
 
 
-#### e. Combination Relation
+#### 4.2.5. Combination Relation
 
 Multiple semantic structures combine to form a new semantic whole, without losing their original meaning. Conversely, splitting them also preserves the meaning. Essentially, this is a computable "relation structure container."
 $$
@@ -419,7 +425,7 @@ $$
 plaintext(A)+space+plaintext(B) = plaintext(A+space+B)
 $$
 
-This **lossless restoration** characteristic of freely splitting and rejoining CML strings endows them with semantic operability, not merely serving as a semantic expression. It provides a solid foundation for collaborative work in tagging.
+This lossless restoration characteristic of freely splitting and rejoining CML strings endows them with semantic operability, not merely serving as a semantic expression. It provides a solid foundation for collaborative work in tagging.
 
 
 
@@ -429,7 +435,7 @@ Since `space` serves the role of a lossless semantic operation, expressions like
 
 
 
-### Operation Priority
+### 4.3. Operation Priority
 
 Relational operations in CML are similar to the expression parsing in programming languages: lexical scanning is performed from left to right, and then, based on the priority of the relational separators, the order of semantic operations is determined.
 
@@ -440,15 +446,15 @@ $$
 
 
 
-### Minimal Completeness
+### 4.4. Minimal Completeness
 
 The five relationship separators are abstracted from the semantic structures of natural language and are the result of deep consideration regarding ambiguity in expression and the controllability of structure.
 
 
 
-#### Natural Language Reference
+#### 4.4.1. Natural Language Reference
 
-The five relational separators defined in CML are inspired by the most fundamental semantic structures implicitly found in natural language: **modification**, **sequential progression**, **parallel listing**, **contrast/mapping**, and **combination**.
+The five relational separators defined in CML are inspired by the most fundamental semantic structures implicitly found in natural language: modification, sequential progression, parallel listing, contrast/mapping, and combination.
 
 ```markdown
 Examples from natural language:
@@ -463,9 +469,9 @@ Theoretically, by combining these five relational primitives, one can express th
 
 
 
-#### Semantic Within Tokens
+#### 4.4.2. Semantic Within Tokens
 
-For logical relations like exclusion, quantifier ranges, or nested mappings, CML does not support them natively at the structural level. Instead, it delegates them to the **token level**, to be used in conjunction with **supplementary relationships**, avoiding structural pollution and reducing complexity in both precedence operations and human readability.
+For logical relations like exclusion, quantifier ranges, or nested mappings, CML does not support them natively at the structural level. Instead, it delegates them to the token level, to be used in conjunction with supplementary relationships, avoiding structural pollution and reducing complexity in both precedence operations and human readability.
 
 
 
@@ -487,27 +493,27 @@ The CSE paradigm does not attempt to explicitly resolve all structural semantic 
 
 
 
-#### The Core Value of Explicit Structure
+#### 4.4.3. The Core Value of Explicit Structure
 
-Skillfully expressing semantic structure within tokens also highlights CML’s core value in **explicit encoding**.
+Skillfully expressing semantic structure within tokens also highlights CML’s core value in explicit encoding.
 
-CML approximates—but is not equal to—natural language. Beyond expressing weighted core semantics, it serves a critical expressive purpose. Unlike natural language reasoning, where token segmentation is uncontrollable, explicit segmentation in CML allows for vertical layering and horizontal relationship delineation in semantics. This eliminates relational ambiguity and ultimately enhances **controllability** and **interpretability**.
+CML approximates—but is not equal to—natural language. Beyond expressing weighted core semantics, it serves a critical expressive purpose. Unlike natural language reasoning, where token segmentation is uncontrollable, explicit segmentation in CML allows for vertical layering and horizontal relationship delineation in semantics. This eliminates relational ambiguity and ultimately enhances controllability and interpretability.
 
 
 
-### Encoding Rules
+### 4.5. Encoding Rules
 
-Based on semantic expression, CML defines **two standard string formats**. The core difference lies in **which object**, at **what stage**, and **in what form**, wraps the semantic token (`semantic_token`).
+Based on semantic expression, CML defines two standard string formats. The core difference lies in which object, at what stage, and in what form, wraps the semantic token (`semantic_token`).
 
 ![image-20250421172756701](./assets/image-20250421172756701.png)
 
 
 
-#### Natural Language Format
+#### 4.5.1. Natural Language Format
 
-The **natural language format** is designed for documentation engineers to **write in plain text**, suitable for **human-readable scenarios**.
+The natural language format is designed for documentation engineers to write in plain text, suitable for human-readable scenarios.
 
-It uses **Markdown syntax** (specifically, *inline code* with backticks) [15] to wrap semantic tokens (`semantic_token`). Documentation engineers can work within a WYSIWYG Markdown editor, making it **fast and intuitive** to edit semantic structures in plain text.
+It uses Markdown syntax (specifically, *inline code* with backticks) [15] to wrap semantic tokens (`semantic_token`). Documentation engineers can work within a WYSIWYG Markdown editor, making it fast and intuitive to edit semantic structures in plain text.
 
 For example, writing the following plain-text string in Markdown:
 
@@ -519,11 +525,11 @@ Will instantly render into the following clear and readable semantic structure:`
 
 
 
-#### Encoded Format
+#### 4.5.2. Encoded Format
 
-CML strings that include backticks (<code>`</code>)—including the separators—may, in certain special scenarios, lead to **unexpected parsing boundaries** or **escaping issues**.
+CML strings that include backticks (<code>`</code>)—including the separators—may, in certain special scenarios, lead to unexpected parsing boundaries or escaping issues.
 
-To address this, and to support use cases such as **embedding**, **storage**, **parsing**, and **computation**, CML defines a more **secure and consistent encoded output format**.
+To address this, and to support use cases such as embedding, storage, parsing, and computation, CML defines a more secure and consistent encoded output format.
 
 ![image-20250418171524138](./assets/image-20250418171524138.png)
 
@@ -533,7 +539,7 @@ Example
 `token1`.`token2`@`token3`+`token4` `token5`:`token6`
 ```
 
-To encode the above plain-text CML string into its **encoded format**, follow these steps:
+To encode the above plain-text CML string into its encoded format, follow these steps:
 
 1. Extract semantic tokens and separators From the original CML string, extract all `semantic tokens` (text within backticks) and `relationship separators` (e.g., `.`, `@`, `+`, ` `, `:`).
 
@@ -562,7 +568,7 @@ zyvFCwFv.zyvFCwFw@zyvFCwFx+zyvFCwFy zyvFCwFz:zyvFCwG1
 
 
 
-#### Line Breaks and Multi-space Compatibility
+#### 4.5.3. Line Breaks and Multi-space Compatibility
 
 In natural text editing scenarios, especially when handling longer contexts, users often insert line breaks (\n, \r\n, \r) to improve readability or add consecutive multiple spaces for visual separation, which is a natural practice.
 
@@ -574,19 +580,19 @@ Therefore, CML editors should support preprocessing robustness by uniformly conv
 
 ## 5. Comparison Between CML and Other Approaches
 
-Currently, there are no systematic solutions identified in this field that address this issue. As of the date of this paper’s publication, no literature has been found that proposes a paradigm based on **dynamic semantic expression**, nor any papers related to **Context Markup Language (CML)**, or Large Language Model (LLM) governance architectures designed from the perspective of the **semantic lifecycle**, including relevant tools or documentation.
+Currently, there are no systematic solutions identified in this field that address this issue. As of the date of this paper’s publication, no literature has been found that proposes a paradigm based on dynamic semantic expression, nor any papers related to Context Markup Language (CML), or Large Language Model (LLM) governance architectures designed from the perspective of the semantic lifecycle, including relevant tools or documentation.
 
 
 
 The industry is still dominated by static structural languages such as JSON, YAML, and RDF, or their improved versions, which are used to support semantic expression, storage, and exchange.
 
-#### JSON-LD vs CML
+### 5.1. JSON-LD vs CML
 
 Among them, JSON-LD, which is compatible with JSON, is currently considered one of the most advanced static semantic expression formats, especially in the areas of web semantics and structured data annotation.
 
 
 
-On one hand, it utilizes the **schema.org** standardized vocabulary [17] for semantic expression, which is a semantic annotation approach supported by major search engines. On the other hand, by using`<script type="application/ld+json">` , it allows for **embedding a snippet of "machine-readable" structured data** into an HTML page. This data is not rendered by the browser and does not affect the visual appearance or layout of the webpage, thus offering a non-intrusive way of semantic expression.
+On one hand, it utilizes the schema.org standardized vocabulary [17] for semantic expression, which is a semantic annotation approach supported by major search engines. On the other hand, by using`<script type="application/ld+json">` , it allows for embedding a snippet of "machine-readable" structured data into an HTML page. This data is not rendered by the browser and does not affect the visual appearance or layout of the webpage, thus offering a non-intrusive way of semantic expression.
 
 
 
@@ -612,9 +618,9 @@ This is precisely why CML defines only five relation delimiters in a minimalist 
 
 
 
-#### JSON Lines vs. CML String
+### 5.2. JSON Lines vs. CML String
 
-Moreover, the nested structure of JSON-LD is highly complex and inefficient to parse in large-scale annotation scenarios, making it less suitable for mainstream use in the LLM field. In contrast, LLMs tend to prefer an alternative approach—**JSON Lines** [18]—which enables **incremental writing/streaming processing** (line by line). 
+Moreover, the nested structure of JSON-LD is highly complex and inefficient to parse in large-scale annotation scenarios, making it less suitable for mainstream use in the LLM field. In contrast, LLMs tend to prefer an alternative approach—JSON Lines [18]—which enables incremental writing/streaming processing (line by line). 
 
 
 
@@ -634,11 +640,11 @@ Here is an example of a  file:`example.jsonl`
 {"id": 3, "prompt": "Thank you", "response": "You're welcome!"}
 ```
 
-Compared to JSON, the key innovation of JSON Lines lies in its use of  as a relationship delimiter for composition. This concept is remarkably similar to CML’s use of **space**（` `） as a composition operator. CML strings obviously also support incremental writing/streaming.
+Compared to JSON, the key innovation of JSON Lines lies in its use of  as a relationship delimiter for composition. This concept is remarkably similar to CML’s use of space（` `） as a composition operator. CML strings obviously also support incremental writing/streaming.
 
 
 
-However, JSON Lines requires file-based storage and is not ideal for use as an **embedded data format**. Additionally, since each line must be parsed as a full JSON object, the segmentation process incurs a higher computational overhead—especially when dealing with large volumes of data. In contrast, CML's use of **single-string slicing** is significantly more efficient in such contexts.`
+However, JSON Lines requires file-based storage and is not ideal for use as an embedded data format. Additionally, since each line must be parsed as a full JSON object, the segmentation process incurs a higher computational overhead—especially when dealing with large volumes of data. In contrast, CML's use of single-string slicing is significantly more efficient in such contexts.`
 
 
 
@@ -648,11 +654,11 @@ The CSE paradigm and the design of CML represent not only a structural innovatio
 
 
 
-Looking ahead, both CSE and CML hold significant value for theoretical research and engineering practice. They have the potential to become foundational elements of semantic infrastructure in the AI era, serving as a **structured semantic intermediate language** across the ecosystem. As the capabilities of large models continue to grow, semantic expression, organization, and reasoning are likely to emerge as core competencies—and key differentiators—of next-generation LLMs.
+Looking ahead, both CSE and CML hold significant value for theoretical research and engineering practice. They have the potential to become foundational elements of semantic infrastructure in the AI era, serving as a structured semantic intermediate language across the ecosystem. As the capabilities of large models continue to grow, semantic expression, organization, and reasoning are likely to emerge as core competencies—and key differentiators—of next-generation LLMs.
 
 
 
-This paper encourages the industry to pay close attention to the theoretical framework and transformative potential of this paradigm, and calls for more visionary contributors to join the effort of promoting CSE and CML as a **globally accepted standard for semantic expression and collaboration**.
+This paper encourages the industry to pay close attention to the theoretical framework and transformative potential of this paradigm, and calls for more visionary contributors to join the effort of promoting CSE and CML as a globally accepted standard for semantic expression and collaboration.
 
 
 
@@ -664,7 +670,7 @@ Open-source project repository: https://github.com/ContextMark/CML
 
 
 
-## 参考文献
+## References
 
 [1] B. Thompson, “AI will drive the cost of intelligence to zero? Not so fast,” *Medium*, Nov. 10, 2024. [Online]. Available: https://medium.com/the-generator/ai-will-drive-the-cost-of-intelligence-to-zero-not-so-fast-d90d901baf10. [Accessed:  Apr. 2025].
 
@@ -681,8 +687,6 @@ Open-source project repository: https://github.com/ContextMark/CML
 [7] N. P. Ding et al., “Knowledge Prompt Chaining for Semantic Modeling,” *arXiv*, Jan. 2025. [Online]. Available: https://arxiv.org/abs/2501.08540. [Accessed: Apr. 20, 2025].
 
 [8] X. Tan et al., “Struct-X: Enhancing Large Language Models Reasoning with Structured Data,” *arXiv*, Jul. 2024. [Online]. Available: https://arxiv.org/abs/2407.12522. [Accessed: Apr. 20, 2025].
-
-
 
 [9] Y. Liu et al., “Generative AI-driven Semantic Communication Networks,” *arXiv*, Jan. 2024. [Online]. Available: https://arxiv.org/abs/2401.00124. [Accessed: Apr. 20, 2025].
 
@@ -706,15 +710,13 @@ Open-source project repository: https://github.com/ContextMark/CML
 
 [19] C. Singh, J. P. Inala, M. Galley, R. Caruana, and J. Gao, “Rethinking Interpretability in the Era of Large Language Models,” *arXiv preprint*, Jan. 30, 2024. [Online]. Available: https://arxiv.org/abs/2402.01761. [Accessed: Apr. 2025].
 
-#### 特别附注
-
 In terms of semantic paradigm thinking, the most cutting-edge conceptual framework may come from Niu Kai and colleagues from Beijing University of Posts and Telecommunications, China, in 2022. Their work aims to advance the way of thinking about communication systems from the "syntactic layer" of the traditional Shannon paradigm to the "semantic layer", shifting the focus from "data compression" to "semantic compression". Based on this foundational logic, they further proposed a corresponding mathematical theory.
 
 [20] K. Niu and P. Zhang, “A Mathematical Theory of Semantic Communication: Overview,” *arXiv preprint*, Jan. 25, 2024. [Online]. Available: https://arxiv.org/abs/2401.14160. [Accessed: Apr. 2025].
 
 [21] K. Niu, J. Dai, S. Yao, S. Wang, Z. Si, X. Qin, and P. Zhang, “Towards Semantic Communications: A Paradigm Shift,” *arXiv preprint*, Mar. 13, 2022. [Online]. Available: https://arxiv.org/abs/2203.06692. [Accessed: Apr. 2025].
 
-In the field of meta-linguistic structural research related to natural language, Professor Cui Xiliang from Beijing Language and Culture University presented some cognitive models in his article published in Issue 5 of *Language Teaching and Linguistic Studies* in 2002. However, these models focus on the **logical dimension** rather than the **underlying structural dimension**.
+In the field of meta-linguistic structural research related to natural language, Professor Cui Xiliang from Beijing Language and Culture University presented some cognitive models in his article published in Issue 5 of *Language Teaching and Linguistic Studies* in 2002. However, these models focus on the logical dimension rather than the underlying structural dimension.
 
-[22] X. C. Cui, “认知语言学: 研究范围和研究方法,” *语言教学与研究*, no. 5, pp. 1–7, 2002. [Online]. Available: https://fls.blcu.edu.cn/attach/0/1410161054566649318.pdf. [Accessed: Apr. 2025].
+[22] X. C. Cui, “认知语言学: 研究范围和研究方法(Cognitive Linguistics: Scope and Methodology),” *语言教学与研究*, no. 5, pp. 1–7, 2002. [Online]. Available: https://fls.blcu.edu.cn/attach/0/1410161054566649318.pdf. [Accessed: Apr. 2025].
 
