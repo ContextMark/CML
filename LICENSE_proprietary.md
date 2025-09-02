@@ -23,7 +23,11 @@ Copyright (c) 2025 赵立伟. All rights reserved.
 
 如需在商业性数据平台服务中使用本项目，请联系作者申请一次性授权：
 
-电子邮件：[zhao@mandaren.com](mailto:zhao@mandaren.com)
+电子邮件：[zhao@mandaren.com](mailto:zhao@mandaren.com)   [zhaoliwei@yyyyer.com](mailto:zhaoliwei@yyyyer.com)  
+
+微信：yueshif
+
+个人站点：https://doc-war.com
 
 ## 免责声明
 

@@ -268,7 +268,7 @@ From the perspective of knowledge governance architecture, the CSE paradigm advo
 
 
 
-### 3.7. Format Encoding
+### 3.6. Format Encoding
 
 On top of freely composable semantic expressions, formalized encoding is applied to produce the final contextual semantic markup.
 
@@ -281,7 +281,7 @@ On top of freely composable semantic expressions, formalized encoding is applied
 
 
 
-### 3.8. Semantic Structure
+### 3.7. Semantic Structure
 
 Relation separators (`<separator>`) are responsible not only for connecting semantic tokens in the expression form, but also for carrying the semantic meaning of the structure itself.
 
@@ -478,7 +478,8 @@ For logical relations like exclusion, quantifier ranges, or nested mappings, CML
 Because tokens themselves can also express structure.
 
 ```markdown
-Natural language example: “Age about 18 to 25, and definitely not Chinese.”        (The token itself can imply range or exclusion structures)
+Natural language example: 
+“Age about 18 to 25, and definitely not Chinese.”        (The token itself can imply range or exclusion structures)
 Annotation:
 ❌ `age`:`range`:`18-25`        (Invalid nesting, completely unnecessary—can be merged earlier or later)
 ❌ `age`:`>18`+`<25`            (Overly fine-grained and unnecessary splitting)
