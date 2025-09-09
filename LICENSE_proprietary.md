@@ -25,9 +25,9 @@ Copyright (c) 2025 赵立伟. All rights reserved.
 
 电子邮件：[zhao@mandaren.com](mailto:zhao@mandaren.com)   [zhaoliwei@yyyyer.com](mailto:zhaoliwei@yyyyer.com)  
 
-微信：yueshif
-
 个人站点：https://doc-war.com
+
+微信号：yueshif
 
 ## 免责声明
 
